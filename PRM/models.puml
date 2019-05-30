@@ -1,0 +1,25 @@
+@startuml
+title models
+Class Person {
+    - name
+    - birthdate
+    - address
+}
+Person --o Relation : 0..*
+
+Class Relation {
+    - person1
+    - person2
+    - description
+}
+
+newpage
+
+title user management
+Class User {
+    - email
+    - password
+}
+
+note top of User : User should also be a person \n inside the software.
+@enduml
